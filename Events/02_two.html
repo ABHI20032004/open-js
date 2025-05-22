@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aqua;">
+    <h1>Chai aur Code</h1>
+    <button id = 'Stop' style=" background-color: crimson; color: lab(89.87% -68.07 85.78);">Stop</button>
+    
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('ABHISHEK')
+    // },3000)
+
+    const sayABHI = function(){
+        console.log("ABHI RAJ")
+    }
+    // document.querySelector('h1').innerHTML = 'Best JS series'
+    const changeheading = function(){
+        document.querySelector('h1').innerHTML = 'Best JS series'
+    }
+    // setTimeout(sayABHI ,3000)
+    //  setTimeout(changeheading ,3000)
+
+
+     ////  click stop to change heading 
+     const channgeMe = setTimeout(changeheading ,3000)
+
+     document.querySelector('#Stop').addEventListener('click' , function(){
+        clearTimeout(channgeMe)
+        console.log("STOPPED")
+     })
+
+
+</script>
+</html>

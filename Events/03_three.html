@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aqua;">
+    <h1>Chai aur JavaScript</h1>
+    <button id = 'Start' style=" background-color: crimson; color: lab(89.87% -68.07 85.78);">Start</button>
+    <button id = 'Stop' style=" background-color: crimson; color: lab(89.87% -68.07 85.78);">Stop</button>
+
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str , Date.now())
+    }
+
+    let intervalID;
+
+    // intervalID = setInterval(sayDate , 1000 , 'Hello')
+
+    document.querySelector('#Start').addEventListener('click' , function(){
+        if( ! intervalID)   ////  to avoid multiple click
+        intervalID = setInterval(sayDate , 1000 , 'Hello')
+         console.log("Printing Start")
+    })
+
+    // clearInterval(intervalID)
+
+    document.querySelector('#Stop').addEventListener('click' , function(){
+        console.log("Printing Stop")
+         clearInterval(intervalID)
+         intervalID = null
+    })
+    
+</script>
+</html>
